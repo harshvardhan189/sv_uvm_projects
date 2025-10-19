@@ -16,27 +16,27 @@
 //`define WIDTH_1024
 
 `ifdef WIDTH_32
-	`define WIDTH 32
+  `define WIDTH 32
 `endif
 
 `ifdef WIDTH_64
-	`define WIDTH 64
+  `define WIDTH 64
 `endif
 
 `ifdef WIDTH_128
-	`define WIDTH 128
+  `define WIDTH 128
 `endif
 
 `ifdef WIDTH_256
-	`define WIDTH 256
+  `define WIDTH 256
 `endif
 
 `ifdef WIDTH_512
-	`define WIDTH 512
+  `define WIDTH 512
 `endif
 
 `ifdef WIDTH_1024
-	`define WIDTH 1024
+  `define WIDTH 1024
 `endif
 
 `define ADDR_OFFSET_WORD 0
