@@ -1,6 +1,6 @@
 //-------------------------------------------------------------
 // project : AHB-APB bridge
-// class   : AHB_sequencer
+// class   : AHB_xtn
 //-------------------------------------------------------------
 class AHB_xtn extends uvm_sequence_item;
 
