@@ -1,15 +1,13 @@
-/*****************************************************
-Prepare by: Harshvardhan Thakor
-Email: thakorharsh189@gamil.com
-******************************************************
-This is a Counter Design
-Specification:
-      1.Asynchronous Counter
-      2.Active Low RESET
-      3.ACTIVE Up and Down
-      4.MOD-10 Counter
-******************************************************/
-
+//----------------------------------------------------
+// Author: Harshvardhan Thakor
+//----------------------------------------------------
+// This is a Counter Design
+// Specification:
+//       1.Asynchronous Counter
+//       2.Active Low RESET
+//       3.ACTIVE Up and Down
+//       4.MOD-10 Counter
+//----------------------------------------------------
 module counter (
     input wire COUNTER_ACTIVE,
     CLK_INC,
@@ -39,8 +37,4 @@ module counter (
     end
   end
 
-  always @(posedge CLK_DEC or negedge RESET_0) begin
-    if (~RESTE_0) begin
-    end
-  end
 endmodule
