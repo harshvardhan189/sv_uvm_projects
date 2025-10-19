@@ -39,7 +39,6 @@ virtual function void count_env::build_phase(uvm_phase phase);
   // create components
   agth = count_agent::type_id::create("agth",this);
   sb = count_scoreboard::type_id::create("sb",this);
-  cfg = count_config::type_id::create("cfg",this);
 endfunction : build_phase
 
 //----------------------------------------------------
