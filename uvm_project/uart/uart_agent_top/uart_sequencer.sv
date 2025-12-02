@@ -1,0 +1,13 @@
+//-------------------------------------------------------------
+// project : UART
+// class   : uart_sequencer
+//-------------------------------------------------------------
+class uart_sequencer extends uvm_sequencer #(uart_trans);
+
+  `uvm_component_utils(uart_sequencer)
+
+  function new(string name = "uart_sequencer", uvm_component parent);
+    super.new(name, parent);
+  endfunction
+
+endclass
