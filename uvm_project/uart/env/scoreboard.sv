@@ -1,16 +1,14 @@
 //-------------------------------------------------------------
-// project : AHB-APB bridge
+// project : UART
 // class   : scoreboard
 //-------------------------------------------------------------
 class scoreboard extends uvm_scoreboard;
 
   `uvm_component_utils(scoreboard)
 
-  uvm_tlm_analysis_fifo #(AHB_xtn) Hfifo;
-  uvm_tlm_analysis_fifo #(APB_xtn) Pfifo;
+  uvm_tlm_analysis_fifo #(uart_trans) Hfifo;
 
-  AHB_xtn Hxtn;
-  APB_xtn Pxtn;
+  uart_trans Hxtn;
 
   function new(string name = "scoreboard", uvm_component parent);
     super.new(name, parent);
@@ -66,7 +64,7 @@ class scoreboard extends uvm_scoreboard;
   task run_phase(uvm_phase phase);
     forever begin
       Hfifo.get(Hxtn);
-      //  `uvm_info("SCOREBOARD",$sformatf(" AHB XTN GET \n%s",Hxtn.sprint()),UVM_LOW)
+      //  `uvm_info("SCOREBOARD",$sformatf(" uart XTN GET \n%s",Hxtn.sprint()),UVM_LOW)
       Pfifo.get(Pxtn);
       //  `uvm_info("SCOREBOARD",$sformatf(" APB XTN GET \n%s",Pxtn.sprint()),UVM_LOW)
 

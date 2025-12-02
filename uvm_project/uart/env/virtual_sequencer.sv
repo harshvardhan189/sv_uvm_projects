@@ -1,5 +1,5 @@
 //-------------------------------------------------------------
-// project : AHB-APB bridge
+// project : UART
 // class  : virtual_sequencer
 //-------------------------------------------------------------
 class virtual_sequencer extends uvm_sequencer #(uvm_sequence_item);
