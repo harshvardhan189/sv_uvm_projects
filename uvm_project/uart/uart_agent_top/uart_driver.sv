@@ -25,14 +25,6 @@ class uart_driver extends uvm_driver #(uart_xtn);
 
   task run_phase(uvm_phase phase);
 
-    @(Hvif.uart_DRV_CB);
-    Hvif.uart_DRV_CB.Hresetn <= 0;
-    @(Hvif.uart_DRV_CB);
-    @(Hvif.uart_DRV_CB);
-    Hvif.uart_DRV_CB.Hresetn <= 1;
-
-    while (Hvif.uart_DRV_CB.Hreadyout !== 1) @(Hvif.uart_DRV_CB);
-
     forever begin
       seq_item_port.get_next_item(req);
       drive(req);
@@ -43,18 +35,6 @@ class uart_driver extends uvm_driver #(uart_xtn);
 
   task drive(uart_xtn xtn);
 
-    //`uvm_info("uart_DRIVER",$sformatf("data from ahb driver \n %s",req.sprint()),UVM_LOW)
-
-    Hvif.uart_DRV_CB.Haddr <= xtn.Haddr;
-    Hvif.uart_DRV_CB.Htrans <= xtn.Htrans;
-    Hvif.uart_DRV_CB.Hsize <= xtn.Hsize;
-    Hvif.uart_DRV_CB.Hreadyin <= 1'b1;
-    Hvif.uart_DRV_CB.Hwrite <= xtn.Hwrite;
-    @(Hvif.uart_DRV_CB);
-
-    while (Hvif.uart_DRV_CB.Hreadyout !== 1) @(Hvif.uart_DRV_CB);
-
-    Hvif.uart_DRV_CB.Hwdata <= xtn.Hwdata;
   endtask
 
 endclass

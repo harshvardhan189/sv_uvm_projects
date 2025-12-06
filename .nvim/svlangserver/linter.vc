@@ -15,6 +15,8 @@
 +incdir+/home/home/trunk/sv_uvm_projects/uvm_project/router_1x3/Router_1x3/src_agt_top
 +incdir+/home/home/trunk/sv_uvm_projects/uvm_project/router_1x3/Router_1x3/tb
 +incdir+/home/home/trunk/sv_uvm_projects/uvm_project/router_1x3/Router_1x3/verilog_tb
++incdir+/home/home/trunk/sv_uvm_projects/uvm_project/uart/env
++incdir+/home/home/trunk/sv_uvm_projects/uvm_project/uart/uart_agent_top
 +incdir+/home/home/trunk/sv_uvm_projects/sv_snippet/Array
 +incdir+/home/home/trunk/sv_uvm_projects/sv_snippet/Constraints
 +incdir+/home/home/trunk/sv_uvm_projects/sv_snippet/task-function
@@ -32,3 +34,5 @@
 +incdir+/home/home/trunk/sv_uvm_projects/uvm_project/router_1x3/Router_1x3/src_agt_top
 +incdir+/home/home/trunk/sv_uvm_projects/uvm_project/router_1x3/Router_1x3/tb
 +incdir+/home/home/trunk/sv_uvm_projects/uvm_project/router_1x3/Router_1x3/verilog_tb
++incdir+/home/home/trunk/sv_uvm_projects/uvm_project/uart/env
++incdir+/home/home/trunk/sv_uvm_projects/uvm_project/uart/uart_agent_top
