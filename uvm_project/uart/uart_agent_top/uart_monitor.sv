@@ -38,7 +38,7 @@ class uart_monitor extends uvm_monitor;
     uart_xtn xtn;
     xtn = uart_xtn::type_id::create("xtn");
 
-    `uvm_info("uart_MONITOR", $sformatf("data from ahb monitor \n %s", xtn.sprint()), UVM_LOW)
+    `uvm_info("uart_MONITOR", $sformatf("data from uart monitor \n %s", xtn.sprint()), UVM_LOW)
 
     mport.write(xtn);
   endtask
