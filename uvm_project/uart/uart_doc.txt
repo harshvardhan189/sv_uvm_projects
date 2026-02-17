@@ -1,0 +1,43 @@
+UART basics
+
+UART is asynchronous, meaning:
+
+❌ No clock line
+
+✅ Timing is derived from baud rate
+
+Frame format (most common)
+Idle (1) → Start(0) → Data bits → Optional Parity → Stop bit(s) (1)
+
+
+Example (8N1):
+
+| 1 | 0 | D0 D1 D2 D3 D4 D5 D6 D7 | 1 |
+
+Key parameters (make these configurable in VIP)
+Parameter Typical values
+Baud rate 9600, 115200, etc
+Data bits 5–8
+Parity  None, Even, Odd
+Stop bits 1 or 2
+Bit order LSB first
+👉 Your VIP must support all combinations, not hardcode 8N1.
+
+Define what your UART VIP should do
+
+A good VIP is more than just driving signals.
+
+Minimum features
+
+✔ UART TX driver
+✔ UART RX monitor
+✔ Scoreboard (TX ↔ RX check)
+✔ Configurable protocol parameters
+✔ Error injection (framing, parity, break)
+
+Advanced features (later)
+
+✔ Baud mismatch testing
+✔ Glitch/noise injection
+✔ Overrun/underrun scenarios
+✔ Coverage (frame types, parity, stop bits)
