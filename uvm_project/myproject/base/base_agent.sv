@@ -9,7 +9,7 @@ class base_agent extends uvm_component;
 
   `uvm_component_utils(base_agent);
 
-  base_driver b_driver;
+  protected static base_driver b_driver;
   base_monitor b_monitor;
   base_sequencer b_sequencer;
 

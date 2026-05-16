@@ -1,13 +1,14 @@
-`ifndef SPI_PACKAGE
-`define SPI_PACKAGE
+// `ifndef SPI_PACKAGE
+// `define SPI_PACKAGE
 
 //------------------------------------------
 // package : spi_package
 //------------------------------------------
 package spi_package;
 
-  import uvm_pkg::*;
+  // import uvm_pkg::*;
 
+  import base_pkg::*;
   `include "spi_transaction.sv"
   `include "spi_sequencer.sv"
   `include "spi_driver.sv"
@@ -15,4 +16,4 @@ package spi_package;
   `include "spi_agent.sv"
 
 endpackage : spi_package
-`endif
+// `endif
