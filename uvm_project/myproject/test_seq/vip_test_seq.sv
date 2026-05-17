@@ -17,6 +17,7 @@ class vip_test_seq extends vip_virtual_seq;
 
   task body();
     super.body;
+    //#1ms;
   endtask : body
 
 endclass

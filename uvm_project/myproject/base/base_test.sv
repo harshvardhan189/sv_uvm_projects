@@ -9,8 +9,14 @@ class base_test extends uvm_test;
 
   `uvm_component_utils(base_test);
 
-  function new(string name = "base_test", uvm_component parent);
+  function new(string name = "base_test", uvm_component parent = null);
+
+    string Testname;
     super.new(name, parent);
+
+    if ($value$plusargs("UVM_TESTNAME=%0s", Testname)) begin
+      Testname = "";
+    end
   endfunction
 
   virtual function void build_phase(uvm_phase phase);

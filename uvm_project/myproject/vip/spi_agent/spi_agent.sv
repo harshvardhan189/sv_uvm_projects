@@ -26,7 +26,7 @@ class spi_agent extends base_agent;
 
   virtual function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
-    //     s_driver.seq_item_port.connect(s_sequencer.seq_item_export);
+    s_driver.seq_item_port.connect(s_sequencer.seq_item_export);
   endfunction : connect_phase
 
 endclass : spi_agent
